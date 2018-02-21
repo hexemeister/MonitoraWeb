@@ -36,13 +36,15 @@ require 'control.php';
 		<form action="control.php" method="post">
 			<div class="form-row">
 				<div class="col">
-					<input type="text" class="form-control" placeholder="Data Inicial" id = "firstdatepicker" name = "firstdatepicker">
+					<label for="dataInicio">Data Início</label>
+					<input type="text" id="dataInicio" name="dataInicio" class="form-control" placeholder="Data Inicial" id = "firstdatepicker" name = "firstdatepicker">
 				</div>
 				<div class="col">
-					<input type="text" class="form-control" placeholder="Data Final" id = "lastdatepicker" name = "lastdatepicker">
+					<label for="dataFim">Data Fim</label>
+					<input type="text" id="dataFim" name="dataFim" class="form-control" placeholder="Data Final" id = "lastdatepicker" name = "lastdatepicker">
 				</div>
 			</div>
-			<button type="button" >Submit</button>
+			<input type="submit" value="Envia" />
 		</form>
 	
 	
