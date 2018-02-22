@@ -37,7 +37,7 @@ require 'control.php';
 			<div class="form-row">
 				<div class="col">
 					<label for="dataInicio">Data Início</label>
-					<input type="text" id="dataInicio" name="dataInicio" class="form-control" placeholder="Data Inicial" id = "firstdatepicker" name = "firstdatepicker">
+					<input type="date" id="dataInicio" name="dataInicio" class="form-control" placeholder="Data Inicial" id = "firstdatepicker" name = "firstdatepicker">
 				</div>
 				<div class="col">
 					<label for="dataFim">Data Fim</label>
