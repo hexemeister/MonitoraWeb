@@ -21,14 +21,14 @@ require 'control.php';
 
 // var_dump(DBRead('atendim','nomedoador, doador', NULL));
 ?>
-  
+
     <title>Monitora Web</title>
 </head>
 <body>
 	<div class="container-fluid">
-		<div class="jumbotron jumbotron-fluid text-center">
+		<div class="jumbotron jumbotron-fluid text-center text-top">
 			<div class="container">
-				<h1 class="display-4">Monitora Web</h1>
+				<h1 class="display-3">Monitora Web</h1>
 				<p class="lead">Sistema Web de Monitoramento de Doações</p>
 			</div>
 		</div>
@@ -41,7 +41,7 @@ require 'control.php';
 				</div>
 				<div class="col">
 					<label for="dataFim">Data Fim</label>
-					<input type="text" id="dataFim" name="dataFim" class="form-control" placeholder="Data Final" id = "lastdatepicker" name = "lastdatepicker">
+					<input type="date" id="dataFim" name="dataFim" class="form-control" placeholder="Data Final" id = "lastdatepicker" name = "lastdatepicker">
 				</div>
 			</div>
 			<input type="submit" value="Envia" />
@@ -65,5 +65,23 @@ echo build_table(DBRead('atendim', 'senha, hrinicio, nomedoador, hrtermino, nmpa
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 		crossorigin="anonymous"></script>
+
+	<script>
+var start = document.getElementById('dataInicio');
+var end = document.getElementById('dataFim');
+
+start.addEventListener('change', function() {
+    if (start.value){
+        end.min = start.value;
+        start.max = end.value;
+	}
+}, false);
+end.addEventListener('change', function() {
+    if (end.value){
+        end.min = start.value;
+        start.max = end.value;
+	}
+}, false);
+  </script>
 </body>
 </html>
