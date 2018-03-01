@@ -3,6 +3,7 @@
 //Conecta ao Banco de Dados
 function DBConnect(){
     $connectionOptions = array("Database"=>DB_DATABASE, "Uid"=>DB_USERNAME, "PWD"=>DB_PASSWORD, "Characterset"=>DB_CHARSET, 'ReturnDatesAsStrings'=> true);
+    
     $conn = @sqlsrv_connect(DB_HOSTNAME, $connectionOptions) or die(sqlsrv_errors());
 
     return $conn;

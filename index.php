@@ -29,9 +29,6 @@ require_once 'control.php';
 				<p class="lead">Sistema Web de Monitoramento de Doações</p>
 			</div>
 		</div>
-	<?php	foreach(get_included_files() as $a){
-        echo $a."<br>";
-    } ?>
 		<form action="control.php" method="post">
 			<div class="form-row">
 				<div class="col">
